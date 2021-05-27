@@ -1,0 +1,10 @@
+
+WebApp06/Test001
+
+<%-- <%@ page buffer="8kb" autoFlush="true" %> 기본 속성 구성--%>
+<%-- <%@ page buffer="1kb" autoFlush="false"%> 일 경우 에러 발생--%>
+<%-- <%@ page buffer="10kb" autoFlush="false"%> 일 경우 정상 처리--%>
+<%@ page buffer="1kb" autoFlush="true"%> <!-- 일 경우 정상 처리 -->
+
+buffer -> 임시 저장공간
+autoflush -> 비우기

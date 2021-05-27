@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function actionPerform()
+	{
+		alert("함수 호출")
+		
+		var nNum = Number(document.getElementById("num").value);
+		var nSum = 0;
+		
+		if (nNum<100)
+		{
+			alert("입력값은 100 이상만 가능합니다.")
+			return;
+		}
+		
+		for (var n=1; n<=nNum; n++)
+		{
+			nSum += n;
+			
+			if (n%10==0)
+			{	
+				document.getElementById("result").value += "1 ~ " + n + " : " + nSum + "\n";
+			}
+			
+		}
+			document.getElementById("result").value += ">> 1 ~ " + nNum + " : " + nSum + "\n";
+		
+	}
+
+</script>
+
+</head>
+<body>
+
+<div>
+	<form> 
+		<div>
+		정수 입력(100 이상)
+		<input type="text" style="width: 140px;" id="num" class="txt">		
+		</div>
+		
+		<br>
+		
+		<div>
+			<input type="button" value="결과" class="btn" style="width: 150px;"
+			onclick="actionPerform()">
+			<input type="reset" value="취소" id="reset" style="width: 150px;">
+		</div>
+		
+		<br><br>
+		
+		<div>
+			<form>
+				<textarea rows="10" cols="40" id="result" readonly="readonly">
+				</textarea>
+			</form>
+			
+		</div>
+		
+	</form>
+	
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+
+<input type="button" value="전송">
+
+<button type="button">전송</button>
+이렇게 되면 위와 같음
+
+<button type="button"><img src="/images/textBtn.png"></button>
+태그를 넣을 수 있다.
+
+
+※ 주의 ※
+<input type="submit">
+<button></button>
+두개 같은 의미
+클릭하게되면 form에서 지정한 데이터에 
+데이터를 요청하고 전송하는 액션을 취하게 됨
+
+위의 구문과 다른 의미이다.
+
+
+-----------------------------------------------------------------------------------
+
+<table>
+   <thead>
+	<tr>
+	   <th></th>
+	</tr>
+   </thead>
+   <tbody>
+	<tr>
+	   <td></td>
+	</tr>
+   </tbody>
+</table>
+
+이렇게 쓰는 경우도 있다.
+

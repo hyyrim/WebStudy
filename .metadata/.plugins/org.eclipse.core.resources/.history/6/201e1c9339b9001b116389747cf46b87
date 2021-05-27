@@ -1,0 +1,17 @@
+/*====================
+	FriendDTO.java
+====================*/
+
+package com.test;
+
+public class FriendDTO
+{
+	
+	String userName;
+	int userAge;
+	
+
+	
+	
+	
+}

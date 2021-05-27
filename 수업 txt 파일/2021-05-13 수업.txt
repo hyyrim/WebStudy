@@ -1,0 +1,16 @@
+RequestDispatcher dispatcher = request.getRequestDispatcher("Receive11.jsp");
+
+-- request 객체에서 dispaatcher를 얻어낸다.
+이렇게 해서 얻어낸 연장 도구(하수인) requestdispatcher 에게는
+forward() 와 include() 가 있다.
+
+이 forward에서 request, response 를 쓴것
+
+dispatcher.forward(request, response);
+
+--------------------------------------------------------------------------------------------------
+
+스레드기반으로 돌아간다 -> 스레드 끼리는 충돌이 없다
+충돌이 나지 않게 넌 대기해! 이렇게 되기 때문에 (하나의 관제탑)
+
+서로 다른 관제탑이 각각 관리하면 충돌이 날 수 있다.

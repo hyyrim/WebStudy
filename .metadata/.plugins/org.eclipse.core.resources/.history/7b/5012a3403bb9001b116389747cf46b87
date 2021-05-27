@@ -1,0 +1,52 @@
+/*====================
+	FriendDTO.java
+====================*/
+
+package com.test;
+
+public class FriendDTO
+{
+	
+	String userName;
+	int userAge;
+	String gender;
+	String ideal;
+	
+	public String getIdeal()
+	{
+		return ideal;
+	}
+	public void setIdeal(String ideal)
+	{
+		this.ideal = ideal;
+	}
+	public String getUserName()
+	{
+		return userName;
+	}
+	public void setUserName(String userName)
+	{
+		this.userName = userName;
+	}
+	public int getUserAge()
+	{
+		return userAge;
+	}
+	public void setUserAge(int userAge)
+	{
+		this.userAge = userAge;
+	}
+	public String getGender()
+	{
+		return gender;
+	}
+	public void setGender(String gender)
+	{
+		this.gender = gender;
+	}
+
+	
+	
+	
+	
+}

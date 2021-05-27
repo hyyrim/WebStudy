@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test028_1</title>
+
+<style type="text/css">
+
+</style>
+
+<script type="text/javascript">
+
+	function order()
+	{
+		//alert("함수 호출");
+		
+		var count = parseInt(document.getElementById("txtCount").value);
+		
+		var random=0;
+		var temp= new Array();
+		
+		var resStr="";
+				
+		for (var i=0; i<count; i++)
+		{
+			for (var j=0; j<6; j++)
+			{	
+				random = parseInt(Math.random()*45)+1
+				
+				temp[j] = random;
+				
+				if (temp[j-1]==random)
+					continue;
+				
+				resStr += random.toString() + " ";
+				
+			}
+			
+			resStr += "\n";
+			
+			
+		}
+		
+		
+		document.getElementById("txtResult").value = resStr;
+		
+		
+		
+	}
+
+</script>
+
+</head>
+<body>
+
+<!--
+	로또 번호(1~45)를 중복되지 않은 정수 6개를 생성하여
+	출력해주는 페이지를 구현한다.
+	HTML, CSS, Javascript 를 활용한다.
+	난수 발생 함수를 활용한다.
+	번호순으로(오름차순) 정렬하여 출력할 수 있도록 한다.
+	주문한 장 수 만큼 출력할 수 있도록 한다.
+	
+	페이지 레이아웃
+	----------------------------------------------------
+	로또 [   3   ] 장    < 주문하기 >
+	
+	결과
+	----------------------------------
+	 3 11 12 22 30 34
+	 6 13 22 24 36 39
+	 2  3 22 34 37 38   
+	----------------------------------
+	
+	----------------------------------------------------
+ -->
+
+ <div>
+ 	<h1>자바스크립트 난수 발생</h1>
+ 	<h2>로또 번호 생성기</h2>
+ 	<hr>
+ </div>
+
+<div>
+	<form>
+		로또
+		<input type="text" id="txtCount" class="txt" style="width: 30pt;"> 장
+		
+		<button type="button" class="btn" style="width: 100pt;"
+		onclick="order()">주문하기</button>
+		
+		<br><br>
+		
+		결과 <br>
+		<textarea rows="10" cols="40" id="txtResult" readonly="readonly"></textarea>
+		
+	</form>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+만년 달력
+
+■ 1단계
+
+1) 1/1/1 ~ year-1/12/31 
+var total = 0;
+total = (year-1)*365 + parseInt((year-1)/4) - parseInt((year-1)/100) + parseInt((year-1)/400);
+
+var m = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+for (var i=0; i<month-1; i++)
+{
+   total += m[i];
+}
+total++;
+
+
+
+■ 2단계
+
+■ 3단계
+
+■ 4단계
+
+■ 5단계

@@ -1,0 +1,12 @@
+
+5월 04, 2021 10:43:26.52 NEW SESSION
+5월 04, 2021 10:43:26.52 [4404:13072:0504/104326.511:ERROR:device_event_log_impl.cc(214)] [10:43:26.511] USB: usb_service_win.cc:352 Could not get child device's service name: 요소가 없습니다. (0x490)
+
+5월 14, 2021 14:38:40.88 NEW SESSION
+5월 14, 2021 14:38:40.88 [4944:4344:0514/143840.885:ERROR:device_event_log_impl.cc(214)] [14:38:40.885] USB: usb_service_win.cc:352 Could not get child device's service name: 요소가 없습니다. (0x490)
+5월 14, 2021 15:07:19.15 [7100:2316:0514/150719.155:ERROR:device_event_log_impl.cc(214)] [15:07:19.154] USB: usb_service_win.cc:352 Could not get child device's service name: 요소가 없습니다. (0x490)
+5월 14, 2021 15:17:31.81 [11780:5192:0514/151731.818:ERROR:device_event_log_impl.cc(214)] [15:17:31.818] USB: usb_service_win.cc:352 Could not get child device's service name: 요소가 없습니다. (0x490)
+
+5월 26, 2021 14:04:20.79 NEW SESSION
+5월 26, 2021 14:04:20.79 [880:17364:0526/140420.786:ERROR:device_event_log_impl.cc(214)] [14:04:20.786] USB: usb_service_win.cc:352 Could not get child device's service name: 요소가 없습니다. (0x490)
+5월 26, 2021 14:07:45.50 [7116:14100:0526/140745.503:ERROR:device_event_log_impl.cc(214)] [14:07:45.503] USB: usb_service_win.cc:352 Could not get child device's service name: 요소가 없습니다. (0x490)

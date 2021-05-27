@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hi Join Us</title>
+
+<style type="text/css">
+	
+	.msg {color red; font-size: small; display: none};
+	input:focus {backgroud-color: #189cb1;}
+</style>
+
+<script type="text/javascript">
+
+	function formCheck()
+	{
+		//alert("함수 호출");
+		
+		//return false;
+		//return true;
+		
+		var userId = document.getElementById("userId");
+		var userPwd = document.getElementById("userPwd");
+		var userName = document.getElementById("userName");	
+		var userTel = document.getElementById("userTel");
+						
+		var idMsg = document.getElementById("idMsg");
+		var pwdMsg = document.getElementById("pwdMsg");
+		var nameMsg = document.getElementById("nameMsg");
+		var telMsg = document.getElementById("telMsg");
+		
+		idMsg.style.display="none";
+		pwdMsg.style.display="none";
+		nameMsg.style.display="none";
+		telMsg.style.display="none";
+		
+		if (userId.value=="")
+		{
+			idMsg.style.display = "inline";
+			userId.focus();
+			return false;
+		}
+		if (userPwd.value == "")	//-- 패스워드가 입력되지 않은 상황
+		{
+			// 테스트
+			//alert("패스워드가 입력되지 않은 상황");
+			pwdMsg.style.display = "inline";
+			userPwd.focus();
+			return false;
+		}
+		
+		if (userName.value == "")	//-- 이름이 입력되지 않은 상황
+		{
+			// 테스트
+			//alert("이름이 입력되지 않은 상황");
+			nameMsg.style.display = "inline";
+			userName.focus();
+			return false;
+		}
+		
+		if (userTel.value == "")	//-- 전화번호가 입력되지 않은 상황
+		{
+			// 테스트
+			//alert("전화번호가 입력되지 않은 상황");
+			telMsg.style.display = "inline";
+			userTel.focus();
+			return false;
+		}
+		
+		return true; 
+	}
+
+</script>
+
+
+</head>
+<body>
+
+<div>
+	<h1>회원 가입</h1>
+	<hr>
+</div>
+
+<div>
+	<form action="Receive01.jsp" method="post" onsubmit="return formCheck()">
+		<table>
+			<tr>
+				<th>아이디(*)</th>
+				<td>
+					<input type="text" id="userId" name="userId"
+					placeholder="ex) eric2195">
+					<span class="msg" id=idMsg">아이디를 입력하세요.</span>
+				</td>
+			</tr>
+			<tr>
+				<th>패스워드(*)</th>
+				<td>
+					<input type="password" id="userPwd" name="userPwd"
+					placeholder="ex) 1234">
+					<span class="msg" id="pwdMsg">패스워드를 입력하세요.</span>
+				</td>
+			</tr>
+			<tr>
+				<th>이름(*)</th>
+				<td>
+					<input type="text" id="userName" name="userName"
+					placeholder="ex) 이하준">
+					<span class="msg" id=nameMsg">이름을 입력하세요.</span>
+				</td>
+			</tr>
+			<tr>
+				<th>전화번호(*)</th>
+				<td>
+					<input type="text" id="userTel" name="userTel"
+					placeholder="ex) 010-1234-5678">
+					<span class="msg" id=telMsg">전화번호를 입력하세요.</span>
+				</td>
+			</tr>
+			<tr>
+				<th>성별</th>
+				<td>
+					<label><input type="radio" name="userGender" id="female" value="여성">여성</label>
+					<label><input type="radio" name="userGender" id="male" value="남성">남성</label>
+				</td>
+			</tr>
+			<tr>
+				<th>지역</th>
+				<td>
+					<select name="userCity" id="userCity">
+						<option value="서울">서울</option>
+						<option value="경기" selected="selected"">경기</option>
+						<option value="대전">대전</option>
+						<option value="대구">대구</option>
+						<option value="부산">부산</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>수강과목</th>
+				<td>
+					<label><input type="checkbox" name="userSubject" id="check1" value="자바">자바</label>
+					<label><input type="checkbox" name="userSubject" id="check2" value="오라클">오라클</label>
+					<label><input type="checkbox" name="userSubject" id="check3" value="JDBC">JDBC</label>
+					<label><input type="checkbox" name="userSubject" id="check4" value="JSP">JSP</label>
+					<label><input type="checkbox" name="userSubject" id="check5" value="스프링">스프링</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<br>
+					<button type="submit" class="btn"
+					style="width: 150px; height: 50px;">회원가입</button>
+					
+					<button type="reset" class="btn"
+					style="width: 150px; height: 50px;">취소</button>
+				</td>	
+			</tr>
+		</table>
+	</form>
+</div>
+
+</body>
+</html>

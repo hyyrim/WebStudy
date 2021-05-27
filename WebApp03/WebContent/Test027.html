@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test027.html</title>
+
+<style type="text/css">
+
+</style>
+
+<script type="text/javascript">
+	
+	function startGame()
+	{
+		//alert("함수 호출");
+		
+		var nNum = document.getElementById("num");
+		nNum--;
+		
+		var rsp = ["가위","바위","보"];
+		var random = Math.floor(Math.random()*3); 
+		//alert(random);
+		
+		var nResult ="";
+		
+		if (nNum==0)
+		{
+			nResult += "사용자 : " + rsp[nNum];
+			
+			if (random==0)
+			{
+				nResult += "    컴퓨터 : " rsp[random] + "→ 무승부 입니다.";
+			}
+			else if (random==1)
+			{
+				nResult +=  "    컴퓨터 : " rsp[random] + " → 컴퓨터가 이겼습니다.";
+			}
+			else
+			{
+				nResult +=  "    컴퓨터 : " rsp[random] + " → 사용자가 이겼습니다.";
+			}
+		}
+		
+		if (nNum==1)
+		{
+			nResult += "사용자 : " + rsp[nNum];
+			
+			if (random==0)
+			{
+				nResult +=  "    컴퓨터 : " rsp[random] + " → 사용자가 이겼습니다.";
+			}
+			else if (random==1)
+			{
+				nResult += "    컴퓨터 : " rsp[random] + "→ 무승부 입니다.";
+			}
+			else
+			{
+				nResult +=  "    컴퓨터 : " rsp[random] + " → 컴퓨터가 이겼습니다.";
+			}
+		}
+		
+		if (nNum==2)
+		{
+			nResult += "사용자 : " + rsp[nNum];
+			
+			if (random==0)
+			{
+				nResult +=  "    컴퓨터 : " rsp[random] + " → 컴퓨터가 이겼습니다.";
+			}
+			else if (random==1)
+			{
+				nResult +=  "    컴퓨터 : " rsp[random] + " → 사용자가 이겼습니다.";
+			}
+			else
+			{
+				nResult += "    컴퓨터 : " rsp[random] + "→ 무승부 입니다.";
+			}
+		}
+		
+		alert(nResult);
+							
+		document.getElementById("result").value = nResult;
+	}
+
+</script>
+
+</head>
+<body>
+
+<!-- 
+	가위 바위 보 게임을 구성한다.
+	HTML, CSS, Javascript 를 활용한다.
+	자바스크립트 난수 발생 함수를 찾아 활용할 수 있도록 한다.
+	
+	페이지 레이아웃
+	---------------------------------------------------------
+	입력(1. 가위, 2.바위, 3.보) : [ 2 ]   <게임 결과 확인>
+	
+	[ 사용자 : 바위    컴퓨터 : 보 → 컴퓨터가 이겼습니다. ]
+	
+	---------------------------------------------------------
+ -->
+ 
+ <div>
+ 	<h1>컴퓨터와 가위바위보 게임</h1>
+ 	<hr>
+ </div>
+
+<div>
+	<form>
+		입력(1. 가위, 2.바위, 3.보) : 
+		<input type="text" id="num" class="txt" style="width: 50px;">
+		<button type="button" onclick="startGame()">게임 결과 확인</button>
+		<br><br>
+		
+		<input type="text" id="result" class="txt" style="width: 360px;"
+		readonly="readonly">
+		
+	</form>
+</div>
+
+
+
+</body>
+</html>

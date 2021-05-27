@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>성적처리 결과 판별 페이지</title>
+
+<style type="text/css">
+	
+	p { font-size 10pt; color: green;}
+	input.txt:hover {color: pink; font-weight: bold;}
+	input.txt:focus {background: aqua; text-align: "right";}
+	input.btn:hover {font-weight: bold; color: red; text-align: "center"}
+</style>
+
+<script type="text/javascript">
+
+	function myCalc()
+	{
+		//alert("함수 호출")
+		
+		var mKor = parseInt(document.getElementById("kor").value);
+		var mEng = parseInt(document.getElementById("eng").value);
+		var mMat = parseInt(document.getElementById("mat").value);
+		
+		var res = "";
+		
+		var tot = mKor + mEng + mMat;
+		
+		var mAvg = Math.round(tot/3);
+		
+		document.getElementById("avg").value = mAvg;
+		
+		//판정 결과
+		
+		if (mAvg>=60)
+		{
+			if (mKor>=40 && mEng>=40 && mMat>=40)
+			{
+				res = "합격";
+			}
+			else
+			{
+				res = "과락";
+			}
+			
+		}
+		else
+		{
+			res = "불합격";	
+		}
+		
+		document.getElementById("result").value = res;
+		
+	}
+
+</script>
+
+</head>
+<body>
+
+<div>
+	<form>
+		이름
+		<input type="text" id="name" class="txt" style="width: 50px;">
+		<br>
+		국어점수
+		<input type="text" id="kor" class="txt" style="width: 50px;">
+		<br>
+		영어점수
+		<input type="text" id="eng" class="txt" style="width: 50px;">
+		<br>
+		수학점수
+		<input type="text" id="mat" class="txt" style="width: 50px;">
+		<br><br>
+		
+		<input type="button" value="처리 결과 확인" class="btn"
+		onclick="myCalc()" style="width: 100px;">
+		
+		<br><br>
+		
+		<p>평균
+		<input type="text" id="avg" class="txt" readonly="readonly"
+		style="width: 100px;"></p>
+		&nbsp
+		
+		<p>판정결과
+		<input type="text" id="result" class="txt" readonly="readonly"
+		style="width: 100px;"></p>
+		
+		
+	</form>
+</div>
+
+
+</body>
+</html>

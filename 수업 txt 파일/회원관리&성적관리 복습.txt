@@ -1,0 +1,25 @@
+● MemberSelect
+
+회원 명단 관리 및 출력 페이지
+
+<버튼>
+1. 회원 성적 관리 → MemberScoreSelect
+2. 신규회원 등록 → MemberInsertForm
+
+＊ submit 이 아닌 <a>태그로 구성 후 href 로 페이지 연결
+
+<%= select 쿼리문 출력>
+
+ * 스크립트 릿 영역에서 구성
+
+-==============[스크립트릿]==================-
+select 쿼리문을 이용한 회원명단 테이블 출력
+
+- StringBuffer 클래스 변수 선언
+- DAO 변수 선언
+
+- try~catch문 (finally까지)
+- DB연결
+- str.append("<table>");
+  StringBuffer 니까 += 가 아닌 append메소드 이용
+

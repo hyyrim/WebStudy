@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Review025.html</title>
+
+<style type="text/css">
+
+</style>
+
+<script type="text/javascript">
+
+	function addMember()
+	{
+		//alert("함수 호출");
+		
+		var name = document.getElementById("txtName").value;
+		var tel = document.getElementById("txtTel").value;
+		var addr = document.getElementById("txtAddr").value;
+		
+		var tableNode = document.getElementById("memberTbl");
+		// memberTbl 이란 table 객체를 tableNode 에 넣는다.
+		
+		//alert(tableNode);
+		//--==> [object HTMLTableElement]
+		// table 객체를 반환
+		
+		// table 에 들어갈 <tr> 과 그 <tr>에 들어갈 <td>가 있어야 함.
+		
+		var trNode = document.createElement("tr");
+		// <tr></tr> 생성
+		
+		//var tdNode = document.createElement("td");
+		// <td></td> 생성
+		//var nameNode = document.createTextNode(name);
+		// TextNode 를 만들어서 그 안에 name을 넣음 → 이걸 변수 nameNode 에 담음
+		// --> TextNode 타입이 들어간 nameNode
+		
+		
+		// <조립①> 
+		// 원래는 …
+		/*
+		tdNode.appendChild(nameNode);
+		// <td>에 TextNode 넣음
+		
+		trNode.appendChild(tdNode);
+		// <tr>에 <td> 넣음
+		
+		tableNode.appendChild(trNode);
+		// <table> 에 <tr> 넣음
+		*/
+		
+		// TextNode → <td> → <tr> → <table>
+		// 이런 형식으로 가야 하는데 ~ 
+		
+		// <조립②>
+		function createTdNode(val)
+		{
+			var textNode = document.createTextNode(val);
+			// 매개변수로 넘겨받은 값을 TextNode 타입으로 넘기고
+			// 이 TextNode타입을 textNode 에 넣음
+			
+			var tdNode = document.createElement("td");
+			// <td></td> 를 생성해서 tdNode에 넣음
+			
+			tdNode.appendChild(textNode);
+			// <td>textNode</td>
+			
+			return tdNode;
+			// <td>textNode</td> 반환
+			
+		}
+				
+		trNode.appendChild(createTdNode(name));
+		trNode.appendChild(createTdNode(tel));
+		trNode.appendChild(createTdNode(addr));
+		// <td>들을 <tr>에 넘김
+		
+		tableNode.appendChild(trNode);
+		// <tr>을 <table>에 넘김
+		
+	}
+	
+
+</script>
+
+
+</head>
+<body>
+
+<div>
+	<form>
+		이름 <input type="text" id="txtName" class="txt"><br>
+		전화번호 <input type="text" id="txtTel" class="txt"><br>
+		주소 <input type="text" id="txtAddr" class="txt"><br>
+		<br>
+		
+		<button type="button" onclick="addMember()">회원 정보 입력</button>
+		<br><br><br>
+		
+		<table border="1" id="memberTbl">
+			<tr>
+				<td>이름</td><td>전화번호</td><td>주소</td>
+			</tr>
+			<tr>
+				<td>김가영</td><td>010-1111-1111</td><td>제주 서귀포</td>
+			</tr>
+			<tr>
+				<td>이유림</td><td>010-2222-2222</td><td>서울 은평구</td>
+			</tr>
+			<tr>
+				<td>김서현</td><td>010-3333-3333</td><td>전남 여수</td>
+			</tr>
+		</table>
+		
+	</form>
+
+</div>
+
+
+</body>
+</html>

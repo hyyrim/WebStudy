@@ -1,0 +1,11 @@
+/*========================
+	GuestDTO.java
+	- dto 또는 vo 활용
+========================*/
+
+package com.test;
+
+public class GuestDTO
+{
+
+}

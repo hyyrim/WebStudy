@@ -1,0 +1,43 @@
+/*========================
+	GuestDTO.java
+	- dto 또는 vo 활용
+========================*/
+
+package com.test;
+
+public class GuestDTO
+{
+	String userName, subject, content;
+
+	public String getUserName()
+	{
+		return userName;
+	}
+
+	public void setUserName(String userName)
+	{
+		this.userName = userName;
+	}
+
+	public String getSubject()
+	{
+		return subject;
+	}
+
+	public void setSubject(String subject)
+	{
+		this.subject = subject;
+	}
+
+	public String getContent()
+	{
+		return content;
+	}
+
+	public void setContent(String content)
+	{
+		this.content = content;
+	}
+	
+	
+}

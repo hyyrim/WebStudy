@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test026.html</title>
+
+<style type="text/css">
+	* {font-family: 맑은 고딕; font-weight: bold;}
+	td {text-align: right;}
+
+</style>
+
+<script type="text/javascript">
+	
+	function createTdNode(val)
+	{
+		var textNode = document.createTextNode(val);
+		var tdNode = document.createElement("td");
+		tdNode.appendChild(textNode);
+		return tdNode;
+	}
+	
+	
+	function createCal()
+	{
+		//alert("함수 호출");
+		
+		var year = document.getElementById("txtYear").value;
+		var month = document.getElementById("txtMonth").value;
+		
+		var lastDate = new Date(year, month, 0)
+		//alert(lastDate.getDate()); --> 31
+		
+		var days = lastDate.getDate();
+		
+		var firstDate = new Date(year, month-1, 1); // 일요일은 0 토요일은 6
+		//alert(firstDate); --> Sat May 01 2021 00:00:00 	
+		
+		var yoil = firstDate.getDay(); // 요일은 시작칸
+		//alert(yoil);
+		
+		// 시작요일, 마지막 날짜는 구성 완료
+		
+		
+		
+		
+		
+		// 객체 생성
+		var tableNode = document.getElementById("calendarTbl");
+		
+		var tbodyNode = null;
+		
+		if (tableNode.childNodes[0].nodeType==1)
+		{
+			tbodyNode = tableNode.childNode[0];
+		}
+		else
+		{
+			tbodyNode = tableNode.childNodes[1];
+		}
+		
+		// tr 노드 생성
+		var trNode = document.createElement("tr");
+		trNode.appendChild(createTdNode(day))
+		
+		
+	}
+
+
+</script>
+
+</head>
+<body>
+
+<div>
+	<h1>테이블 동적 생성으로 만년달력 그리기</h1>
+	<hr>
+</div>
+
+<div>
+	<form>
+		<input type="text" id="txtYear" class="txt" style="width: 67px;"> 년
+		<input type="text" id="txtMonth" class="txt" style="width: 67px;"> 월
+		<br><br>
+		
+		<button type="button" class="btn" style="width: 200px;"
+		onclick="createCal()">만년달력 그리기</button>
+		<br><br>
+		
+		<table border="1" id="calendarTbl">
+			<tr>
+				<th>일</th>
+				<th>월</th>
+				<th>화</th>
+				<th>수</th>
+				<th>목</th>
+				<th>금</th>
+				<th>토</th>
+			</tr>
+		
+		</table>
+		
+	</form>
+		
+</div>
+
+</body>
+</html>

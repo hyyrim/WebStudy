@@ -1,0 +1,31 @@
+
+HTML 영역에서
+
+class 	→ css
+id 	→ Javascript
+name 	→ JSP
+
+------------------------------------------------------------------------
+
+● 라디오버튼
+
+<label><input type="radio" class="" name="" id="" value="">항목이름</label>
+
+
+● 체크박스
+
+<label><input type="checkbox" name="" id="" value="">항목이름</label>
+
+
+● Select 
+<select name="" id="" size="" multiple="multiple">
+	<option value="" selected="selected">항목이름</option>
+</select>
+
+
+
+------------------------------------------------------------------------
+
+onchange는 무언가 action이 있을때 실행(이벤트 발생)되야 하는데
+첫 화면에 1단이 선택되어 있기 때문에 1단을 선택해도 이벤트 발생하지 Ⅹ
+→ 아무 의미 없는 ==단 선택== 옵션을 만들어 둔다.

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test028_1</title>
+
+<style type="text/css">
+	
+	* {font-weight: bold;}
+
+</style>
+
+<script type="text/javascript">
+
+	function createLotto()
+	{
+		//alert("함수 호출");
+		
+		var count = parseInt(document.getElementById("txtCount").value);
+		
+		// 추가 → 이전의 남아있던 내용 제거
+		document.getElementById("resultArea").value ="";
+		
+		for (var i=0; i<count; i++)
+		{
+			document.getElementById("resultArea").value
+				//+= 로또 한 게임 + "\n";
+				+= runlottoSingle() + "\n";
+		}
+		
+	}
+	
+	// 로또 한 게임
+	function runlottoSingle()
+	{
+		// 방 6개로 구성된 배열 생성
+		var lottoArray = new Array(6);
+		
+		// 로또 추첨 공 45개 생성
+		var arr = new Array(45);
+		
+		
+		// 45개 추첨 공에 1 ~ 45 까지의 로또 번호 적어넣기
+		for (var i=1; i<=arr.length; i++)
+			arr[i-1] = i;
+		
+		// 테스트
+		//alert(arr[9]);
+		//--==> 10
+		
+		// 뒤섞기
+		for (var i=0; i<arr.length; i++)
+		{
+			var j = parseInt(Math.random()*45);	// 0 ~ 44 까지의 정수형태의 난수 한 개 발생
+			var temp = arr[i];
+			arr[i] = arr[j]
+			arr[j] = temp;
+		}
+		
+		// 테스트
+		//return arr;
+		
+		// 배열의 요소 옮겨담기
+		for (var i=0; i<lottoArray.length; i++)
+			lottoArray[i] = arr[i];
+		
+		
+		// 정렬(오름차순)
+		lottoArray.sort(function(left, right)
+		{
+			return Number(left)-Number(right);
+		});
+		// 이 sort 함수를 그냥 쓸수도 있지만 이 정렬기능을 사용했을때
+		// 우리가 원하는 크기비교가 아닌 '문자열'을 정렬하고 크기비교를 한다.
+		// 왼쪽/오른쪽을 아스키코드로 크기비교를해서 이게 음수가나오냐, 양수가 나오냐로
+		// 비교를 한다. 그래서 얘한테 sort(크기비교기능) 을 넣어줄건데
+		// 이건 이름이 필요 없는 함수라서 (불러서 쓸 일이 없다) annonymous → 기능에 대한
+		// 부분만 처리. 
+		// 뺄셈 연산을 통해 양수인지/음수인지 확인 → 숫자 크고작음으로 판별 → 정렬 수행
+		
+	
+		// 구성된 배열 반환
+		return lottoArray;
+		
+		
+	}
+
+
+</script>
+
+</head>
+<body>
+
+<!--
+	로또 번호(1~45)를 중복되지 않은 정수 6개를 생성하여
+	출력해주는 페이지를 구현한다.
+	HTML, CSS, Javascript 를 활용한다.
+	난수 발생 함수를 활용한다.
+	번호순으로(오름차순) 정렬하여 출력할 수 있도록 한다.
+	주문한 장 수 만큼 출력할 수 있도록 한다.
+	
+	페이지 레이아웃
+	----------------------------------------------------
+	로또 [   3   ] 장    < 주문하기 >
+	
+	결과
+	----------------------------------
+	 3 11 12 22 30 34
+	 6 13 22 24 36 39
+	 2  3 22 34 37 38   
+	----------------------------------
+	
+	----------------------------------------------------
+ -->
+
+ <div>
+ 	<h1>자바스크립트 난수 발생</h1>
+ 	<h2>로또 번호 생성기</h2>
+ 	<hr>
+ </div>
+
+<div>
+	<form>
+		로또
+		<input type="text" id="txtCount" class="txt" style="width: 20pt;"> 장
+		
+		<button type="button" class="btn" style="width: 100pt;"
+		onclick="createLotto()">주문하기</button>
+		
+		<br><br>
+		
+		결과 <br>
+		<textarea rows="" cols="" id="resultArea" style="width: 240px; height: 140px;" 
+		readonly="readonly"></textarea>
+		
+	</form>
+</div>
+
+
+
+</body>
+</html>
