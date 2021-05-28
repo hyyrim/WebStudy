@@ -8,28 +8,18 @@
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath(); 	
 %>
-
-<%-- 객체 생성 이건 아닌가..?--%>
-<%-- <jsp:useBean id="ob" class="com.test.core.MemberDTO"></jsp:useBean>
-<jsp:setProperty property="*" name="ob"/> --%>
-
 <%
 	//자료구조 생성
-	
-	String[] name = request.getParameterValues("name");
-	String[] tel = request.getParameterValues("tel");
-	String[] addr = request.getParameterValues("addr");
-	
 	List<MemberDTO> lists = new ArrayList<MemberDTO>();
 	
-	MemberDTO dto = null;
-	
-	for(int i=0; i<name.length; i++)
+	for(int i=1; i<=5; i++)
 	{
-		dto = new MemberDTO(name[i], tel[i], addr[i]);
-		lists.add(dto);		
+		MemberDTO ob = new MemberDTO(request.getParameter("name"+i)
+								   , request.getParameter("tel"+i)
+								   , request.getParameter("addr"+i));
+		lists.add(ob);
 	}
-	
+
 	request.setAttribute("lists", lists);
 %>
 

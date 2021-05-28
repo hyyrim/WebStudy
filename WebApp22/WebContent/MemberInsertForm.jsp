@@ -33,6 +33,14 @@
 					<c:forEach var="a" begin="1" end="5" step="1">
 						<input type="text" name="name">					
 					</c:forEach>
+
+					<%-- name1, name2 …	
+					<c:set var="i" value="1"></c:set>
+					<c:forEach var="a" begin="1" end="5" step="1">
+						<input type="text" name="name${i }">
+						<c:set var="i" value="${i+1 }"<c/set>					
+					</c:forEach> 
+					--%>
 				</td>
 			</tr>
 			<tr>

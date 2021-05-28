@@ -10,3 +10,7 @@
 5월 26, 2021 14:04:20.79 NEW SESSION
 5월 26, 2021 14:04:20.79 [880:17364:0526/140420.786:ERROR:device_event_log_impl.cc(214)] [14:04:20.786] USB: usb_service_win.cc:352 Could not get child device's service name: 요소가 없습니다. (0x490)
 5월 26, 2021 14:07:45.50 [7116:14100:0526/140745.503:ERROR:device_event_log_impl.cc(214)] [14:07:45.503] USB: usb_service_win.cc:352 Could not get child device's service name: 요소가 없습니다. (0x490)
+
+5월 28, 2021 24:22:55.92 NEW SESSION
+5월 28, 2021 24:22:55.93 [15116:14100:0528/002255.928:ERROR:device_event_log_impl.cc(214)] [00:22:55.928] USB: usb_device_handle_win.cc:1058 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 28, 2021 24:22:55.93 [15116:14100:0528/002255.928:ERROR:device_event_log_impl.cc(214)] [00:22:55.928] USB: usb_service_win.cc:352 Could not get child device's service name: 요소가 없습니다. (0x490)
