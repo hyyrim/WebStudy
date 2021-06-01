@@ -31,10 +31,12 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="com.test.mvc.MemberDTO"/>
-<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="com.test.mvc.MemberListModel"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="com.test.mvc.MemberDAO"/>
+<fullyQualifiedTypeName name="com.test.mvc.MemberDTO"/>
+<fullyQualifiedTypeName name="com.test.mvc.MemberInsertFormModel"/>
 <fullyQualifiedTypeName name="com.test.mvc.MemberInsertModel"/>
-<fullyQualifiedTypeName name="com.test.mvc.MemberListModel"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 </qualifiedTypeNameHistroy>
