@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	
+	.test
+	{
+		border: solid 4px gray;
+		color: blue;
+	}
+	
+</style>
+
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+
+	$(document).ready(function()
+	{
+		/*
+		$("h1").click(function()
+		{
+			//alert("클릭되었습니다.");
+			//alert( $(this).html() ); // h1 안에 있는 내용 그대로 나옴
+			//$(this).html("테스트중"); // 클릭하면 값이 대체되어 바뀜
+			//$(this).html( $(this).html() + "★" ); // 현재내용 + ★
+		});
+		*/
+		
+		/*
+		$("h1").on("click", function()
+		{
+			//alert( $(this).html() ); // 위와 같은 구문이다
+		});
+		*/
+		
+		/*
+		$("h1").one("click", function()
+		{
+			$(this).html(function(index, html)
+			{
+				//alert(html); // 내용이 한번만 뜬다
+				//alert(index); // this 개념으로 접근하기때문에 다 0번째 ?
+					
+				//return html + "안녕"; // 값이 대체되어 바뀐다 (한번만)
+			});	
+		});*/
+		
+		$("h1").hover(function() // 마우스 지나갈때
+		{
+			$(this).addClass("test"); // test 클래스 만들어라
+		}, function()
+		{
+			$(this).removeClass("test"); // test 클래스 없애라
+			// 순차적으로 function 적어주는 건가 보다.
+		});
+		
+		
+	});
+
+</script>
+
+</head>
+<body>
+
+<h1>테스트</h1>
+<h1>Hello</h1>
+<h1>Hi</h1>
+
+</body>
+</html>
