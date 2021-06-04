@@ -33,10 +33,9 @@
 		</list>
 	</section>
 	<section name="PreferencesExportWizard">
-		<item key="" value="C:\WebStudy\jsp_preferences.epf"/>
+		<item key="" value="C:\WebStudy\Preferences\jQuery_preferences.epf"/>
 		<item key="WizardPreferencesExportPage1.STORE_OVERWRITE_EXISTING_FILES_ID" value="false"/>
 		<item key="WizardPreferencesExportPage1.EXPORT_ALL_PREFERENCES_ID" value="true"/>
-		<item key="" value="C:\WebStudy\Preferences\jQuery_preferences.epf"/>
 		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
 			<item value="C:\WebStudy\Preferences\jQuery_preferences.epf"/>
 			<item value="C:\WebStudy\jsp_preferences.epf"/>
