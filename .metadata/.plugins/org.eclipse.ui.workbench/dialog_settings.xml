@@ -12,7 +12,9 @@
 	</section>
 	<section name="PreferencesImportWizard">
 		<item key="" value="C:\WebStudy\Preferences\jsp_preferences.epf"/>
+		<item key="" value="C:\Downloads\10_Preferences\web_final.epf"/>
 		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Downloads\10_Preferences\web_final.epf"/>
 			<item value="C:\WebStudy\Preferences\jsp_preferences.epf"/>
 			<item value="C:\Users\Hyerim\OneDrive\문서\카카오톡 받은 파일\jsp_preferences.epf"/>
 			<item value="C:\Users\Hyerim\OneDrive\문서\카카오톡 받은 파일\jdbc_standard.epf"/>

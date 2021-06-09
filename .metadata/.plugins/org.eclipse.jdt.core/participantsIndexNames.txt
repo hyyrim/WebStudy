@@ -29,6 +29,8 @@ C:\WebStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1524570062.ind
 \WebApp09\src
 C:\WebStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2684425562.index
 \JsonApp\src
+C:\WebStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2377970760.index
+\AjaxJqueryApp06\src
 C:\WebStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1797297870.index
 \WebApp09\src
 C:\WebStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1066004228.index
